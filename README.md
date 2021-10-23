@@ -14,4 +14,5 @@ This program is for educational purpose only, not for finance or anything else. 
 - Add indicators: RSI, ...
 - Alarm/Notification for Overbought/Oversold
 - While loop to update price constantly (or just daily)
-- API: https://messari.io/
+- Price API: https://messari.io/
+- Learn and use buy the dip algorithm .txt
