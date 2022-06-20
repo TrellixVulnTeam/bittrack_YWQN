@@ -17,6 +17,7 @@ This program is for educational purpose only, not for finance or anything else. 
 - Price API: https://messari.io/
 - Learn and use buy the dip algorithm .txt
 - Finding a backtest method
+- Use Binance API from Toi di code dao video
 
 ## Buy/Sell indicators to check out
 - Cross RSI in <25 / >75 region
