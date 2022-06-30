@@ -10,7 +10,7 @@ const binance = new ccxt.binance({
         apiKey: process.env.API_KEY_binance_read,
         secret: process.env.SECRET_KEY_binance_read
     })
-    
+
 async function main() {
     const price = await binance.fetchOHLCV("BTC/USDT", "15m", undefined, 1000);
     const pricex = price.map((price) => {
@@ -38,3 +38,10 @@ playing();
 
 // main()
 
+/* continue
+    - Write buy/sell logic 
+        - Set order when RSI escaped overbought/oversold (threshold) zone
+        - Set TP/SL: half if move x amount (if touch TP, set SL to entry), half if touch the opposite threshold.
+    - Back-test, forward-test with variable account
+    - Use official order library from Exchange
+*/

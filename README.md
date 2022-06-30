@@ -15,7 +15,7 @@ This program is for educational purpose only, not for finance or anything else. 
 - Alarm/Notification for Overbought/Oversold
 - While loop to update price constantly (or just daily)
 - Price API: https://messari.io/
-- Learn and use buy the dip algorithm .txt
+- Learn and use buy the dip algorithm in text file (Bin) 
 - Finding a backtest method
 - Use Binance API from Toi di code dao video
 
