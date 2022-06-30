@@ -1,10 +1,10 @@
-# ₿itTrack
+# ₿itTracker
 
-Bitcoin Price tracker - A program that gives trading signal for Bitcoin based solely on EMA50 and price on H1 timeframe.
-
-![Output](public/images/Screenshot-31-aug.png)
+Bitcoin Price Tracker - A program where I play with my own trading algorithms.
 
 This program is for educational purpose only, not for finance or anything else. I am not responsible for your financial consequences :)
+
+![Output](public/images/Screenshot-31-aug.png)
 
 <br>
 
@@ -22,4 +22,4 @@ This program is for educational purpose only, not for finance or anything else. 
 ## Buy/Sell indicators to check out
 - Cross RSI in <25 / >75 region
 - Supertrend indicator / algorithm https://www.elearnmarkets.com/blog/supertrend-indicator-strategy-trading/
-- 
+
