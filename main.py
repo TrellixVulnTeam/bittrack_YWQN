@@ -1,6 +1,7 @@
 import ccxt
 from decouple import config
 
+
 API_KEY = config('API_KEY_binance_read', default='')
 SECRET_KEY = config('SECRET_KEY_binance_read', default='')
 
