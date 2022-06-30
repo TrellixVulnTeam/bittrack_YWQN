@@ -12,3 +12,8 @@ binance = ccxt.binance({
 })
 
 print(binance.apiKey)
+
+
+# get-pip
+# curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# get-pip.py
