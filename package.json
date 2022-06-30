@@ -1,0 +1,25 @@
+{
+  "name": "bittrack",
+  "version": "1.0.0",
+  "description": "Bitcoin Price tracker - A program that gives trading signal for Bitcoin based solely on EMA50 and price on H1 timeframe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodonguyen/bittrack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodonguyen/bittrack/issues"
+  },
+  "homepage": "https://github.com/rodonguyen/bittrack#readme",
+  "dependencies": {
+    "ccxt": "^1.89.19",
+    "dotenv": "^16.0.1",
+    "moment": "^2.29.3"
+  }
+}
