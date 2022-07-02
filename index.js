@@ -46,10 +46,3 @@ async function playing() {
 // playing();
 // main()
 
-/* continue
-    - Write buy/sell logic 
-        - Set order when RSI escaped overbought/oversold (threshold) zone
-        - Set TP/SL: half if move x amount (if touch TP, set SL to entry), half if touch the opposite threshold.
-    - Back-test, forward-test with variable account
-    - Use official order library from Exchange
-*/
