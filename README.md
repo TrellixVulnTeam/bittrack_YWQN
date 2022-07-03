@@ -14,9 +14,10 @@ This program is for educational purpose only, not for finance or anything else. 
 - Write buy/sell logic 
     - Set order when RSI escaped overbought/oversold (threshold) zone. RSI can be calculated from available libraries.
     - Set TP/SL: half if move x amount (if touch TP, set SL to entry), half if touch the opposite threshold.
-- Back-test, forward-test with variable account
-- Use official order library from Exchange
+- Back-test, forward-test with different lengths
+- Plot chart for further insights
 
+- To execute real order, use official API from Exchange
 - Alarm for signals
 - While loop to update price constantly (or just daily)
 - Price API: https://messari.io/
