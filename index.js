@@ -14,8 +14,8 @@ const binance = new ccxt.binance({
     })
 
 async function main() {
-    const price = await binance.fetchOHLCV("BTC/USDT", "15m", undefined, 2000);
-    const pricex = price.map((price) => {
+    const prices = await binance.fetchOHLCV("BTC/USDT", "15m", undefined, 2000);
+    const pricex = prices.map((price) => {
         return {
             timestamp: moment(price[0]).format(),
             open: price[1],
@@ -30,19 +30,16 @@ async function main() {
     console.log(pricex);
 }
 
-async function playing() {
-    // const status = await utils.getApiStatus(binance);
-    // const balance = await utils.getBalance(binance);
+async function rsiBot() {
 
-    // console.log('Playing function');
-    // console.log(status);
-    // console.log('USDC: ' + balance.total.USDC);
-    
-    // let pricex = fs.readFileSync('pricex_2006_3006.json');
-    // pricex = JSON.parse(pricex);
-    // console.log(pricex);
 }
 
-// playing();
+async function supertrendBot() {
+
+}
+
+
+
+rsiBot();
 // main()
 
