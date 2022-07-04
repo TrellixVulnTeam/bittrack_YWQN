@@ -22,7 +22,7 @@ async function getApiStatus(account) {
 
 /**
  * @param
- *      closedPrices: an array of prices, desirably of length 'length'. If its length longer than 'length', the array will be trimmed off.
+ *      closedPrices: an array of closed prices, desirably of length 'length'. If its length longer than 'length', the array will be trimmed off.
  *      length: the length of RSI calculated  
  */
 function calculateRsi(closedPrices, length=14) {
@@ -47,18 +47,44 @@ function calculateRsi(closedPrices, length=14) {
     return 100.0 - (100.0 / (1 + (sumGain / sumLoss)));
 }
 
-function calculateSupertrend(closedPrices, length=10, multiplier=3) {
+function calculateSupertrend(prices, length=10, multiplier=3, 
+                            previousFinalUpperband=0, previousFinalLowerband=0) {
     // https://tradingtuitions.com/supertrend-indicator-excel-sheet-with-realtime-buy-sell-signals/
-    var prices = handleInputLength(closedPrices, length);
-    
-    for (let i = 1; i < length; i++) {
-        
+    var prices = handleInputLength(prices, length);
+    const currentPrice = prices[length-1]
+    const previousClose = prices[length-2].close;
+    var sum = 0;
+    for (const price of prices) {
+        sum += Math.max(price.high-price.low, 
+                        price.high-price.close, 
+                        price.low-price.close);
     }
+    
+    const ATR = sum / length
+    const basicUpperband = (currentPrice.high+currentPrice.low)/2 + multiplier * ATR
+    const basicLowerband = (currentPrice.high+currentPrice.low)/2 - multiplier * ATR
+    var finalUpperband = 0;
+    var finalLowerband = 0;
 
+    if ((basicUpperband < previousFinalUpperband) || previousClose > previousFinalUpperband)
+        finalUpperband = basicUpperband;
+    else 
+        finalUpperband = previousFinalUpperband;
 
+    if ((basicLowerband < previousFinalLowerband) || previousClose > previousFinalLowerband)
+        finalLowerband = basicLowerband;
+    else 
+        finalLowerband = previousFinalUpperband;
+
+    // Supertrend
+    const supertrend = currentPrice.close <= finalUpperband? finalUpperband : finalLowerband; 
+
+    return {supertrend: supertrend, 
+            finalUpperband: finalUpperband, 
+            finalLowerband: finalLowerband};
 }
 
 
 
 
-module.exports = { getApiStatus, getBalance, calculateRsi};
+module.exports = { getApiStatus, getBalance, calculateRsi, calculateSupertrend};

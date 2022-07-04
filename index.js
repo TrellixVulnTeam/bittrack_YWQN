@@ -31,15 +31,25 @@ async function main() {
 }
 
 async function rsiBot() {
+    var old_prices = require('./pricex_2006_3006.json');
 
 }
 
 async function supertrendBot() {
+    var old_prices = require('./pricex_2006_3006.json');
+    
+    const s1 = utils.calculateSupertrend(old_prices.slice(0,10), 10, 3);
+    console.log(s1.supertrend);
+
+    const s2 = utils.calculateSupertrend(old_prices.slice(1,11), 10, 3, s1.finalUpperband1, s1.finalLowerband1);
+    console.log(s2.supertrend);
+
+
 
 }
 
 
 
-rsiBot();
+supertrendBot();
 // main()
 
