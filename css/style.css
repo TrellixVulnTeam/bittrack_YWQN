@@ -1,0 +1,13 @@
+body {
+    font-size: medium;
+    color: rgb(238, 238, 238);
+    background-color: #1E293B;
+    padding: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    background-color: #013A91;
+    font-weight: bold;
+}
