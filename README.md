@@ -27,4 +27,3 @@ This program is for educational purpose only, not for finance or anything else. 
 - RSI excapes <25 / >75 region
 - Supertrend indicator / algorithm https://www.elearnmarkets.com/blog/supertrend-indicator-strategy-trading/
 - Buy the dip algorithm in text file (Bin) 
-

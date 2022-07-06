@@ -1,3 +1,5 @@
+// Using d3 and svg
+
 // set the dimensions and margins of the graph
 var margin = {top: 30, right: 30, bottom: 30, left: 90},
     width = 770 - margin.left - margin.right,

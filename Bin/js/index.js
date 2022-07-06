@@ -1,11 +1,16 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { priceChart } from './priceChart';
+
 const ccxt = require("ccxt");
 const moment = require("moment");
 require("dotenv").config();
 const utils = require("./utils");
 const fs = require('fs');
 
-// import * as utils from './utils.js';
-//  {getApiStatus, getBalance} from './utils.js';
+const rootElement = document.getElementById('root');
+createRoot(rootElement).render(<App />);
+
 
 
 const binance = new ccxt.binance({
