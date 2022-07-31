@@ -103,32 +103,7 @@ async function supertrendBot() {
         }
     }
 
-
     console.log(prices.slice(11,30));
-
-
-    // const start = 150;
-    // const temp = {supertrend: 0, 
-    //         finalUpperband: 0, 
-    //         finalLowerband: 0};
-    // var s = utils.calculateSupertrend(old_prices.slice(start,start+10), 10, 3, temp);
-    // // console.log(s);
-
-
-    // for (let i=start+11; i < start+30; i++) {
-        
-    //     s = utils.calculateSupertrend(old_prices.slice(i-10,i), 10, 3, s);
-    //     console.log(i, Number((old_prices[i].close).toFixed(2)), '\t', Number((s.supertrend).toFixed(2)));
-    //     // console.log(s);
-    // }
-
-    // const s1 = utils.calculateSupertrend(old_prices.slice(0,10), 10, 3);
-    // console.log(s1.supertrend);
-
-    // const s2 = utils.calculateSupertrend(old_prices.slice(1,11), 10, 3, s1.finalUpperband1, s1.finalLowerband1);
-    // console.log(s2.supertrend);
-
-    // check price at 10, 11 see if it's going down
 }
 
 
